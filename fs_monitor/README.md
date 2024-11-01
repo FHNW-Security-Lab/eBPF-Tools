@@ -19,18 +19,6 @@ This tool is particularly useful for:
 - Option to show or hide file descriptor operations.
 - Provides full file paths where possible, using `/proc` information.
 
-## Prerequisites
-
-- **Linux Kernel** version 4.18 or newer (supports eBPF).
-- **Python 3.6** or newer.
-- **bcc** library installed.
-
-Install `bcc` and necessary headers:
-
-```bash
-sudo apt-get install bpfcc-tools linux-headers-$(uname -r) python3-bpfcc
-```
-
 ## Usage
 
 Run the tool using the following command:
@@ -77,6 +65,3 @@ Monitoring stopped
 ## License
 
 This project is licensed under BSD 3-Clause Licence.
-
-
-
