@@ -23,7 +23,11 @@ git clone https://github.com/FHNW-Security-Lab/eBPF-Tools```
 ```
 ## Tools Included
 
-### 1. **eBPF Forensics Monitor**
+### 2. **eBPF Forensics Monitor**
+
+A eBPF to control the file system access for a specific tool. Helpful to enforce file system rules on processes.
+
+### 1. **eBPF Process control**
 
 A eBPF to monitor the file system access for a specific tool. Helpful for forensics and to find data left on the disk by programs 
 
