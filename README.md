@@ -34,8 +34,9 @@ A eBPF to monitor the file system access for a specific tool. Helpful for forens
 ## Requirements
 
 - Linux kernel version 4.18 or newer (eBPF support required).
-- Python 3.6 or newer for managing scripts.
 - `bcc` or `libbpf` library installed for eBPF interaction.
+- Requies eBPF to be enabled for LSM (/etc/default/grup, add bpf to GRUB_CMDLINE_LINUX, e.g. GRUB_CMDLINE_LINUX="lsm=landlock,bpf")
+ 
 
 Install the required dependencies using:
 
