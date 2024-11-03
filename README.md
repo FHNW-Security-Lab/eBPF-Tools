@@ -17,7 +17,7 @@ The project is hosted on GitHub: [eBPF Forensics Tools](https://github.com/FHNW-
 Clone the repository using:
 
 ```bash
-git clone https://github.com/FHNW-Security-Lab/eBPF-Tools```
+git clone https://github.com/FHNW-Security-Lab/eBPF-Tools
 ```
 ## Tools Included
 
@@ -36,7 +36,6 @@ A eBPF to control the file system access for a specific tool. Helpful to enforce
 - Linux kernel version 4.18 or newer (eBPF support required).
 - `bcc` or `libbpf` library installed for eBPF interaction.
 - Requies eBPF to be enabled for LSM (`/etc/default/grup`, add `bpf` to `GRUB_CMDLINE_LINUX`, e.g. `GRUB_CMDLINE_LINUX="lsm=landlock,bpf"`)
- 
  
 
 Install the required dependencies using:
