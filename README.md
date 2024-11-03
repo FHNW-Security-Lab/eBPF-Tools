@@ -27,7 +27,7 @@ A eBPF to monitor the file system access for a specific tool. Helpful for forens
 
 
 
-### 2. **eBPF Process control**
+### 2. **eBPF Process Control**
 
 A eBPF to control the file system access for a specific tool. Helpful to enforce file system rules on processes.
 
