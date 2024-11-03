@@ -19,6 +19,8 @@ An eBPF Tool to monitor file access events of a specific process, providing insi
 
 ## Required Settings
 
+Requies eBPF to be enabled for LSM (`/etc/default/grup`, add `bpf` to `GRUB_CMDLINE_LINUX`, e.g. `GRUB_CMDLINE_LINUX="lsm=landlock,bpf"`)
+
 - Settings that may be required:
 
 ```bash
