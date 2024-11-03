@@ -1,7 +1,5 @@
 # eBPF-Tools
 
-# eBPF Tools
-
 A collection of tools based on eBPF (Extended Berkeley Packet Filter) for forensics, security control, and various other applications.
 
 ## Overview
@@ -25,11 +23,13 @@ git clone https://github.com/FHNW-Security-Lab/eBPF-Tools```
 
 ### 1. **eBPF Forensics Monitor**
 
-A eBPF to control the file system access for a specific tool. Helpful to enforce file system rules on processes.
-
-### 2. **eBPF Process control**
-
 A eBPF to monitor the file system access for a specific tool. Helpful for forensics and to find data left on the disk by programs 
+
+
+
+### 2. **eBPF Process Control**
+
+A eBPF to control the file system access for a specific tool. Helpful to enforce file system rules on processes.
 
 ## Requirements
 
