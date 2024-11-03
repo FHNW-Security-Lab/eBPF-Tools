@@ -15,7 +15,7 @@ An eBPF Tool to monitor file access events of a specific process, providing insi
 
 ## Warning
 
-- The tool is under development and some processes crash. Also it does not cache access to operations yet, so it can be annoying.
+- The tool is under development and some processes crash. Currently, we do not distinguish between files and file descriptors, so it may block stdin and stdout if you deny access. 
 
 ## Required Settings
 
@@ -56,7 +56,7 @@ or to specify by process name:
 
 ```bash
 sudo ./dist/bin/lsm_fs_control --name <process-name>
-sudo ./dist/bin/lsm_fs_control --pid <process-pid>
+sudo ./dist/bin/lsm_fs_control --pid <PID>
 ```
 
 ### Arguments
