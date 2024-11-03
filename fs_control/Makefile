@@ -68,4 +68,3 @@ deps:
 	@if [ ! -d "libbpf" ]; then \
 		git clone https://github.com/libbpf/libbpf.git; \
 	fi
-
