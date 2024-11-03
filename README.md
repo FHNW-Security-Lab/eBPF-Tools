@@ -38,26 +38,6 @@ A eBPF to control the file system access for a specific tool. Helpful to enforce
 - Requies eBPF to be enabled for LSM (`/etc/default/grup`, add `bpf` to `GRUB_CMDLINE_LINUX`, e.g. `GRUB_CMDLINE_LINUX="lsm=landlock,bpf"`)
  
  
-- Settings that may be required:
-
-```bash
-sudo sysctl -w kernel.unprivileged_bpf_disabled=0
-sudo sysctl -w kernel.perf_event_paranoid=1
-sudo sysctl -w net.core.bpf_jit_enable=1
-sudo setcap cap_bpf=eip ./dist/bin/lsm_fs_control
-```
- 
-- To verify the setting:
- ```bash
-$ grep LSM /boot/config-$(uname -r) | grep BPF
-CONFIG_BPF_LSM=y
-
-$ cat /sys/kernel/security/lockdown
-[none] integrity confidentiality
-
-$ cat /sys/kernel/security/lsm
-lockdown,capability,landlock,bpf,ima,evm
-```
 
 Install the required dependencies using:
 

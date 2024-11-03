@@ -17,6 +17,30 @@ An eBPF Tool to monitor file access events of a specific process, providing insi
 
 - The tool is under development and some processes crash. Also it does not cache access to operations yet, so it can be annoying.
 
+## Required Settings
+
+- Settings that may be required:
+
+```bash
+sudo sysctl -w kernel.unprivileged_bpf_disabled=0
+sudo sysctl -w kernel.perf_event_paranoid=1
+sudo sysctl -w net.core.bpf_jit_enable=1
+sudo setcap cap_bpf=eip ./dist/bin/lsm_fs_control
+```
+ 
+- To verify the setting:
+
+ ```bash
+$ grep LSM /boot/config-$(uname -r) | grep BPF
+CONFIG_BPF_LSM=y
+
+$ cat /sys/kernel/security/lockdown
+[none] integrity confidentiality
+
+$ cat /sys/kernel/security/lsm
+lockdown,capability,landlock,bpf,ima,evm
+```
+
 ## Usage
 
 Build:
